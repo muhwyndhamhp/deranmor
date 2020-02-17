@@ -9,20 +9,20 @@ import io.muhwyndham.deranmor.dao.ReportDao
 import io.muhwyndham.deranmor.model.CarModel
 import io.muhwyndham.deranmor.model.Report
 
-@Database(entities =[Report::class, CarModel::class], version = 1, exportSchema = false)
+@Database(entities = [Report::class, CarModel::class], version = 1, exportSchema = false)
 abstract class ReportDatabase : RoomDatabase() {
 
-    abstract fun reportDao() : ReportDao
+    abstract fun reportDao(): ReportDao
     abstract fun carModelDao(): CarModelDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE : ReportDatabase? = null
+        private var INSTANCE: ReportDatabase? = null
 
-        fun getDatabase(context : Context): ReportDatabase? {
+        fun getDatabase(context: Context): ReportDatabase? {
             synchronized(ReportDatabase::class.java) {
-                if(INSTANCE == null) {
+                if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
                         ReportDatabase::class.java, "report_database"
