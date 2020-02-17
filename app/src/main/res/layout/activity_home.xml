@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="stateVisible|adjustResize"
+    tools:context=".ui.HomeActivity">
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DeRanmor"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bt_cari"
+            android:width="110dp"
+            android:text="Cari Data"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:height="110dp" />
+
+        <Button
+            android:id="@+id/bt_input"
+            android:width="110dp"
+            android:text="Input Data"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorPrimary"
+            android:height="110dp" />
+
+        <Button
+            android:width="110dp"
+            android:text="Edit Data"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorPrimary"
+            android:height="110dp" />
+
+        <Button
+            android:width="110dp"
+            android:text="Update"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:height="110dp" />
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

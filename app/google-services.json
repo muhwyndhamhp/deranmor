@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "947827470899",
+    "firebase_url": "https://deran-d2f27.firebaseio.com",
+    "project_id": "deran-d2f27",
+    "storage_bucket": "deran-d2f27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947827470899:android:81e706533d4429efcba946",
+        "android_client_info": {
+          "package_name": "io.muhwyndham.deranmor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947827470899-m7mt7gd7vad1djija4k0t7d8bb3mfohu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.muhwyndham.deranmor",
+            "certificate_hash": "a2c7a07c8f23fc27df07d93bb1f37749f8cdbb3c"
+          }
+        },
+        {
+          "client_id": "947827470899-sp8ujroe5ppp9bmc79ee15pum9i5o6qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD1hKpLHUzHGdluqyx-kAiaFn9z5TaVs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947827470899-sp8ujroe5ppp9bmc79ee15pum9i5o6qb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
