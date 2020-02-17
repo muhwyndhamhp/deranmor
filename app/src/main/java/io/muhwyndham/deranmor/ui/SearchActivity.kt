@@ -1,9 +1,11 @@
+@file:Suppress("DEPRECATION")
+
 package io.muhwyndham.deranmor.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,9 +15,10 @@ import io.muhwyndham.deranmor.model.Report
 import io.muhwyndham.deranmor.viewmodel.ReportViewModel
 import kotlinx.android.synthetic.main.activity_search.*
 
+@Suppress("DEPRECATION")
 class SearchActivity : AppCompatActivity() {
 
-    private var reportViewModel : ReportViewModel? = null
+    private var reportViewModel: ReportViewModel? = null
 
     private var adapter: HomeRvAdapter? = null
 
@@ -29,20 +32,16 @@ class SearchActivity : AppCompatActivity() {
             ?.observe(this, Observer<List<Report>> { this.renderReports(it) })
 
         et_search.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
+            override fun afterTextChanged(s: Editable?) {}
 
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (et_search.getText().toString().trim { it <= ' ' }.isNotEmpty())
-                    reportViewModel?.getReportThatContainString("%${et_search.getText().toString().trim()}%")?.observe(
+                if (et_search.text.toString().trim { it <= ' ' }.isNotEmpty())
+                    reportViewModel?.getReportThatContainString("%${et_search.text.toString().trim()}%")?.observe(
                         this@SearchActivity,
                         Observer<List<Report>> { this@SearchActivity.renderReports(it) })
-                else if (et_search.getText().toString().trim().isEmpty())
+                else if (et_search.text.toString().trim().isEmpty())
                     reportViewModel?.getReport()?.observe(
                         this@SearchActivity,
                         Observer<List<Report>> { this@SearchActivity.renderReports(it) })
@@ -51,11 +50,11 @@ class SearchActivity : AppCompatActivity() {
         })
 
         bt_search.setOnClickListener {
-            if (et_search.getText().toString().trim { it <= ' ' }.isNotEmpty())
-                reportViewModel?.getReportThatContainString("%${et_search.getText().toString().trim()}%")?.observe(
+            if (et_search.text.toString().trim { it <= ' ' }.isNotEmpty())
+                reportViewModel?.getReportThatContainString("%${et_search.text.toString().trim()}%")?.observe(
                     this,
                     Observer<List<Report>> { this.renderReports(it) })
-            else if (et_search.getText().toString().trim().isEmpty())
+            else if (et_search.text.toString().trim().isEmpty())
                 reportViewModel?.getReport()?.observe(
                     this,
                     Observer<List<Report>> { this.renderReports(it) })
