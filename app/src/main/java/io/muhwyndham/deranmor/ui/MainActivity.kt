@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == Activity.RESULT_OK) {
-                val user = FirebaseAuth.getInstance().currentUser
+//                val user = FirebaseAuth.getInstance().currentUser
 
                 val toast = Toast.makeText(
                     this@MainActivity,
