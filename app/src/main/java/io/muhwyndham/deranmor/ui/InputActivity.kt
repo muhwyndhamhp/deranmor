@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package io.muhwyndham.deranmor.ui
 
 import android.os.Bundle
@@ -22,21 +24,21 @@ class InputActivity : AppCompatActivity() {
 
         bt_input.setOnClickListener {
             if (
-                et_nama.getText().toString().trim { it <= ' ' }.isNotEmpty()
-                && et_nama.getText().toString().trim { it <= ' ' }.isNotEmpty()
-                && et_tipe_kendaraan.getText().toString().trim { it <= ' ' }.isNotEmpty()
-                && et_nomor_aduan.getText().toString().trim { it <= ' ' }.isNotEmpty()
+                et_nama.text.toString().trim { it <= ' ' }.isNotEmpty()
+                && et_nama.text.toString().trim { it <= ' ' }.isNotEmpty()
+                && et_tipe_kendaraan.text.toString().trim { it <= ' ' }.isNotEmpty()
+                && et_nomor_aduan.text.toString().trim { it <= ' ' }.isNotEmpty()
 
             ) {
                 val report = Report(
                     0,
-                    et_nama.getText().toString(),
-                    et_nopol.getText().toString(),
-                    et_tipe_kendaraan.getText().toString(),
-                    if (et_nomor_rangka.getText().toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_rangka.getText().toString() else "-",
-                    if (et_nomor_mesin.getText().toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.getText().toString() else "-",
+                    et_nama.text.toString(),
+                    et_nopol.text.toString(),
+                    et_tipe_kendaraan.text.toString(),
+                    if (et_nomor_rangka.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_rangka.text.toString() else "-",
+                    if (et_nomor_mesin.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.text.toString() else "-",
                     " ",
-                    et_nomor_aduan.getText().toString()
+                    et_nomor_aduan.text.toString()
                 )
 
                 reportViewModel?.setReport(report)
