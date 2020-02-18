@@ -2,6 +2,7 @@
 
 package io.muhwyndham.deranmor.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import io.muhwyndham.deranmor.R
 import io.muhwyndham.deranmor.adapter.SearchReportAdapter
 import io.muhwyndham.deranmor.model.Report
+import io.muhwyndham.deranmor.utils.Constants.Companion.REPORT_ID
 import io.muhwyndham.deranmor.viewmodel.ReportViewModel
 import kotlinx.android.synthetic.main.activity_search.*
 
@@ -61,8 +63,15 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
+
+    fun navigateToEditActivity(id: String) {
+        val intent = Intent(this@SearchActivity, EditActivity::class.java)
+        intent.putExtra(REPORT_ID, id)
+        startActivity(intent)
+    }
+
     private fun renderReports(reportList: List<Report>) {
-        adapter = SearchReportAdapter(reportList)
+        adapter = SearchReportAdapter(this@SearchActivity, reportList)
         val layoutManager = LinearLayoutManager(this@SearchActivity)
         rv_report.layoutManager = layoutManager
         rv_report.adapter = adapter

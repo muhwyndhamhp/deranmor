@@ -5,6 +5,8 @@ package io.muhwyndham.deranmor.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -29,6 +31,8 @@ class InputActivity : AppCompatActivity() {
         carModelViewModel = ViewModelProviders.of(this).get(CarModelViewModel::class.java)
 
         prepareDialogObserver()
+        prepareSpinner()
+        prepareInputCaps()
 
         et_tipe_kendaraan.setOnClickListener {
             startActivityForResult(
@@ -47,18 +51,34 @@ class InputActivity : AppCompatActivity() {
                 ?.observe(this@InputActivity, Observer { isValid ->
                     reportViewModel?.setReport(
                         isValid, Report(
-                            0,
+                            et_nopol.text.toString().toUpperCase().trim(),
                             et_nama.text.toString(),
-                            et_nopol.text.toString(),
                             et_tipe_kendaraan.text.toString() + " " + et_tahun_kendaraan.text.toString(),
-                            if (et_nomor_rangka.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_rangka.text.toString() else "-",
-                            if (et_nomor_mesin.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.text.toString() else "-",
+                            if (et_nomor_rangka.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_rangka.text.toString().toUpperCase().trim() else "-",
+                            if (et_nomor_mesin.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.text.toString().toUpperCase().trim() else "-",
                             " ",
-                            et_nomor_aduan.text.toString()
+                            et_nomor_aduan.text.toString().toUpperCase().trim(),
+                            spinner_status_aduan.selectedItem.toString()
                         )
                     )?.observe(this@InputActivity, Observer { if (it) finish() })
                 })
         }
+    }
+
+    private fun prepareInputCaps() {
+        val inputFilter = Array<InputFilter>(1){ InputFilter.AllCaps()}
+        et_nopol.filters = inputFilter
+        et_nomor_rangka.filters = inputFilter
+        et_nomor_mesin.filters = inputFilter
+        et_nomor_aduan.filters = inputFilter
+    }
+
+    private fun prepareSpinner() {
+
+        val adapter = ArrayAdapter.createFromResource(this, R.array.status_aduan, android.R.layout.simple_spinner_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        spinner_status_aduan.adapter = adapter
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
