@@ -16,12 +16,29 @@ class ReportViewModel(application: Application) : AndroidViewModel(application) 
 
     fun getReport() = repository.getAllReport()
 
+    fun getSingleReport(id: String) = repository.getSingleReport(id)
+
     fun getReportThatContainString(string: String) = repository.getReportThatContainString(string)
 
     fun setReport(isValid: Boolean, report: Report): MutableLiveData<Boolean> {
 
-        if (isValid) repository.setReport(report)
-        return MutableLiveData(true)
+        if (isValid) {
+            repository.setReport(report)
+            return MutableLiveData(true)
+        } else {
+            return MutableLiveData(false)
+        }
+
+
+    }
+
+    fun updatereport(isValid: Boolean, report: Report): MutableLiveData<Boolean> {
+        if (isValid) {
+            repository.updateReport(report)
+            return MutableLiveData(true)
+        } else {
+            return MutableLiveData(false)
+        }
 
     }
 
