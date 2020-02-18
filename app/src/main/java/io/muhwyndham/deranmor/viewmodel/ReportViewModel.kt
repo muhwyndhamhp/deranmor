@@ -18,9 +18,11 @@ class ReportViewModel(application: Application) : AndroidViewModel(application) 
 
     fun getReportThatContainString(string: String) = repository.getReportThatContainString(string)
 
-    fun setReport(isValid: Boolean, report: Report) {
+    fun setReport(isValid: Boolean, report: Report): MutableLiveData<Boolean> {
 
         if (isValid) repository.setReport(report)
+        return MutableLiveData(true)
+
     }
 
     fun validateReportInput(

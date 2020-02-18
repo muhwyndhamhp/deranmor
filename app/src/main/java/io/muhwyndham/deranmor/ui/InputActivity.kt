@@ -2,6 +2,7 @@
 
 package io.muhwyndham.deranmor.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -30,8 +31,12 @@ class InputActivity : AppCompatActivity() {
         prepareDialogObserver()
 
         et_tipe_kendaraan.setOnClickListener {
-            startActivity(Intent(this@InputActivity, SearchCarModelActivity::class.java))
+            startActivityForResult(
+                Intent(this@InputActivity, SearchCarModelActivity::class.java),
+                1003
+            )
         }
+
 
         bt_input.setOnClickListener {
             reportViewModel?.validateReportInput(
@@ -39,20 +44,29 @@ class InputActivity : AppCompatActivity() {
                 et_tipe_kendaraan,
                 et_nomor_aduan
             )
-                ?.observe(this@InputActivity, Observer {
+                ?.observe(this@InputActivity, Observer { isValid ->
                     reportViewModel?.setReport(
-                        it, Report(
+                        isValid, Report(
                             0,
                             et_nama.text.toString(),
                             et_nopol.text.toString(),
-                            et_tipe_kendaraan.text.toString(),
+                            et_tipe_kendaraan.text.toString() + " " + et_tahun_kendaraan.text.toString(),
                             if (et_nomor_rangka.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_rangka.text.toString() else "-",
                             if (et_nomor_mesin.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.text.toString() else "-",
                             " ",
                             et_nomor_aduan.text.toString()
                         )
-                    )
+                    )?.observe(this@InputActivity, Observer { if (it) finish() })
                 })
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1003) {
+            if (resultCode == Activity.RESULT_OK) {
+                et_tipe_kendaraan.setText(data?.data.toString())
+            }
         }
     }
 
