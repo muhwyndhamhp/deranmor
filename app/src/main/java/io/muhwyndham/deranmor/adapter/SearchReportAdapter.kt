@@ -9,8 +9,8 @@ import io.muhwyndham.deranmor.R
 import io.muhwyndham.deranmor.model.Report
 import kotlinx.android.synthetic.main.report_item.view.*
 
-class HomeRvAdapter(val reportList: List<Report>) :
-    RecyclerView.Adapter<HomeRvAdapter.ViewHolder>() {
+class SearchReportAdapter(val reportList: List<Report>) :
+    RecyclerView.Adapter<SearchReportAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.report_item, parent, false)
