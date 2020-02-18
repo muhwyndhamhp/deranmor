@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import io.muhwyndham.deranmor.R
+import io.muhwyndham.deranmor.model.CarModel
+import io.muhwyndham.deranmor.repository.AppRepository
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +22,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         prepareFirebaseUI()
+    }
+
+    private fun insertCarModels() {
+        val repository = AppRepository(application)
+
+        val carModelArray = resources.getStringArray(R.array.car_model)
+
+        for (string in carModelArray) {
+            repository.setCarModel(
+                CarModel(
+                    0, string
+                )
+            )
+        }
     }
 
     private fun prepareFirebaseUI() {
@@ -47,6 +63,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 )
                 toast.show()
+
+                insertCarModels()
 
                 startActivity(Intent(this@MainActivity, HomeActivity::class.java))
             } else {
