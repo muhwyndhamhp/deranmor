@@ -4,6 +4,7 @@ import android.app.Application
 import io.muhwyndham.deranmor.dao.CarModelDao
 import io.muhwyndham.deranmor.dao.ReportDao
 import io.muhwyndham.deranmor.database.ReportDatabase
+import io.muhwyndham.deranmor.model.CarModel
 import io.muhwyndham.deranmor.model.Report
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,6 +32,20 @@ class AppRepository(application: Application) : CoroutineScope {
 
     fun setReport(report: Report) {
         launch { setReportBG(report) }
+    }
+
+    fun getAllCarModel() = carModelDao?.getAllCarModel()
+
+    fun getCarModelThatContainString(string: String) = carModelDao?.getCarModelThatContains(string)
+
+    fun setCarModel(carModel: CarModel) {
+        launch { setCarModelBG(carModel) }
+    }
+
+    private suspend fun setCarModelBG(carModel: CarModel) {
+        withContext(Dispatchers.IO) {
+            carModelDao?.insertCarModel(carModel)
+        }
     }
 
     private suspend fun setReportBG(report: Report) {
