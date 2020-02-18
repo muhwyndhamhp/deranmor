@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.muhwyndham.deranmor.R
-import io.muhwyndham.deranmor.adapter.HomeRvAdapter
+import io.muhwyndham.deranmor.adapter.SearchReportAdapter
 import io.muhwyndham.deranmor.model.Report
 import io.muhwyndham.deranmor.viewmodel.ReportViewModel
 import kotlinx.android.synthetic.main.activity_search.*
@@ -20,7 +20,7 @@ class SearchActivity : AppCompatActivity() {
 
     private var reportViewModel: ReportViewModel? = null
 
-    private var adapter: HomeRvAdapter? = null
+    private var adapter: SearchReportAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +62,7 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun renderReports(reportList: List<Report>) {
-        adapter = HomeRvAdapter(reportList)
+        adapter = SearchReportAdapter(reportList)
         val layoutManager = LinearLayoutManager(this@SearchActivity)
         rv_report.layoutManager = layoutManager
         rv_report.adapter = adapter
