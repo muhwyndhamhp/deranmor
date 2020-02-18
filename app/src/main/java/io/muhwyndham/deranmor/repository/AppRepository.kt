@@ -1,6 +1,7 @@
 package io.muhwyndham.deranmor.repository
 
 import android.app.Application
+import com.google.firebase.firestore.FirebaseFirestore
 import io.muhwyndham.deranmor.dao.CarModelDao
 import io.muhwyndham.deranmor.dao.ReportDao
 import io.muhwyndham.deranmor.database.ReportDatabase
@@ -19,6 +20,7 @@ class AppRepository(application: Application) : CoroutineScope {
 
     private var reportDao: ReportDao?
     private var carModelDao: CarModelDao?
+    private val db = FirebaseFirestore.getInstance()
 
     init {
         val db = ReportDatabase.getDatabase(application)
@@ -28,10 +30,17 @@ class AppRepository(application: Application) : CoroutineScope {
 
     fun getAllReport() = reportDao?.getAllReport()
 
+    fun getSingleReport(id: String) = reportDao?.getReport(id)
+
     fun getReportThatContainString(string: String) = reportDao?.getReportThatContains(string)
 
     fun setReport(report: Report) {
         launch { setReportBG(report) }
+    }
+
+
+    fun updateReport(report: Report) {
+        launch { updateReportBG(report) }
     }
 
     fun getAllCarModel() = carModelDao?.getAllCarModel()
@@ -40,6 +49,13 @@ class AppRepository(application: Application) : CoroutineScope {
 
     fun setCarModel(carModel: CarModel) {
         launch { setCarModelBG(carModel) }
+    }
+
+    private suspend fun updateReportBG(report: Report) {
+        withContext(Dispatchers.IO) {
+            reportDao?.updateReport(report)
+            db.collection("report").document(report.idNopol).set(report)
+        }
     }
 
     private suspend fun setCarModelBG(carModel: CarModel) {
@@ -51,6 +67,7 @@ class AppRepository(application: Application) : CoroutineScope {
     private suspend fun setReportBG(report: Report) {
         withContext(Dispatchers.IO) {
             reportDao?.setReport(report)
+            db.collection("report").document(report.idNopol).set(report)
         }
 
     }
