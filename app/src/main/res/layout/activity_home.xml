@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:windowSoftInputMode="stateVisible|adjustResize"
     tools:context=".ui.HomeActivity">
 
@@ -49,14 +50,15 @@
 
         <Button
             android:width="110dp"
-            android:text="Edit Data"
+            android:text="Update Data"
+            android:textSize="13sp"
             android:textColor="#ffffff"
             android:backgroundTint="@color/colorPrimary"
             android:height="110dp" />
 
         <Button
             android:width="110dp"
-            android:text="Update"
+            android:text="About Us"
             android:textColor="#ffffff"
             android:backgroundTint="@color/colorPrimaryDark"
             android:height="110dp" />

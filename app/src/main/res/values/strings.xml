@@ -4,6 +4,13 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
 
+    <string-array name="status_aduan">
+        <item>Dalam Pencarian</item>
+        <item>Ditemukan</item>
+        <item>Dalam Penyidikan</item>
+        <item>Selesai</item>
+
+    </string-array>
     <string-array name="car_model">
         <item> AUDI A4 </item>
         <item> AUDI A5 </item>

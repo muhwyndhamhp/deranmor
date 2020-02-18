@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.SearchCarModelActivity"></activity>
+        <activity android:name=".ui.EditActivity"></activity>
+        <activity android:name=".ui.SearchCarModelActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.SearchActivity" />
         <activity android:name=".ui.InputActivity" />
         <activity
