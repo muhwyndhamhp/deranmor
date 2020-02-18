@@ -59,6 +59,18 @@
                 tools:ignore="Autofill" />
 
             <EditText
+                android:id="@+id/et_tahun_kendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan tahun kendaraan"
+                android:inputType="number"
+                tools:ignore="Autofill" />
+
+            <EditText
                 android:id="@+id/et_nomor_rangka"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

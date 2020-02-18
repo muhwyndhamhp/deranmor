@@ -3,4 +3,344 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+
+    <string-array name="car_model">
+        <item> AUDI A4 </item>
+        <item> AUDI A5 </item>
+        <item> AUDI A6 </item>
+        <item> AUDI A7 </item>
+        <item> AUDI A8 </item>
+        <item> AUDI Q3 </item>
+        <item> AUDI Q5 </item>
+        <item> AUDI Q7 </item>
+        <item> AUDI R8 V10 </item>
+        <item> AUDI RS4 </item>
+        <item> AUDI RS5 </item>
+        <item> AUDI S3 </item>
+        <item> BMW 2 Series </item>
+        <item> BMW 3 Series </item>
+        <item> BMW 4 Series </item>
+        <item> BMW 5 Series </item>
+        <item> BMW 6 Series </item>
+        <item> BMW 7 Series </item>
+        <item> BMW 116i </item>
+        <item> BMW M Series </item>
+        <item> BMW M135i Coupe </item>
+        <item> BMW X Models </item>
+        <item> BMW Z4 </item>
+        <item> CHERY Eastar ES </item>
+        <item> CHERY Q22 (Transcar) </item>
+        <item> CHERY Q22B (Transcab) </item>
+        <item> CHERY QQ </item>
+        <item> CHERY Tiggo </item>
+        <item> CHEVROLET Aveo </item>
+        <item> CHEVROLET Captiva </item>
+        <item> CHEVROLET Captiva 2.0 Dsl  AWD </item>
+        <item> CHEVROLET Colorado EC 2,5L </item>
+        <item> CHEVROLET Colorado LT/LTZ </item>
+        <item> CHEVROLET Lova </item>
+        <item> CHEVROLET Orlando </item>
+        <item> CHEVROLET Spin </item>
+        <item> CHEVROLET Trailblazer </item>
+        <item> CHEVROLET Trailblazer 2.8 AWD </item>
+        <item> CHRYSLER 300 C </item>
+        <item> CHRYSLER 300 SRT </item>
+        <item> CHRYSLER Sebring </item>
+        <item> DAIHATSU Ayla </item>
+        <item> DAIHATSU BV </item>
+        <item> DAIHATSU Copen </item>
+        <item> DAIHATSU Gran Max PU </item>
+        <item> DAIHATSU Luxio </item>
+        <item> DAIHATSU Sirion </item>
+        <item> DAIHATSU Terios </item>
+        <item> DAIHATSU Xenia </item>
+        <item> DATSUN Datsun GO+ </item>
+        <item> DODGE Journey (Sunroof) </item>
+        <item> FAW CHASSIS </item>
+        <item> FAW CHASSIS CARGO </item>
+        <item> FAW DUMP TRUCK </item>
+        <item> FAW MINI MIXER </item>
+        <item> FAW MIXER </item>
+        <item> FAW SELF LOADER </item>
+        <item> FAW TRACTOR HEAD </item>
+        <item> FIAT 500 </item>
+        <item> FORD Ecosport </item>
+        <item> FORD Everest </item>
+        <item> FORD Fiesta </item>
+        <item> FORD Focus </item>
+        <item> FORD Ranger DC and RAS </item>
+        <item> FORD Ranger SC </item>
+        <item> FOTON Ambulance STD </item>
+        <item> FOTON Auman Dump Truck </item>
+        <item> FOTON Auman Tractor Head </item>
+        <item> FOTON Cargo Truck </item>
+        <item> FOTON Dump Truck 330 </item>
+        <item> FOTON Tractor Head 420 </item>
+        <item> FOTON View CT Microbus STD </item>
+        <item> GEELY Emgrand </item>
+        <item> GEELY Emgrand7 (RV) </item>
+        <item> GEELY LC </item>
+        <item> GEELY MK </item>
+        <item> GEELY MK2 </item>
+        <item> GEELY TX 4 </item>
+        <item> HINO A 215 </item>
+        <item> HINO Dutro </item>
+        <item> HINO Dutro 110 </item>
+        <item> HINO FB 130 </item>
+        <item> HINO FC </item>
+        <item> HINO FC 190 </item>
+        <item> HINO FG </item>
+        <item> HINO FL </item>
+        <item> HINO FM </item>
+        <item> HINO R 235 </item>
+        <item> HINO R 260 </item>
+        <item> HINO RN 285 </item>
+        <item> HINO SG </item>
+        <item> HONDA  CR-V </item>
+        <item> HONDA Accord </item>
+        <item> HONDA Brio </item>
+        <item> HONDA Brio SATYA </item>
+        <item> HONDA City </item>
+        <item> HONDA CR-Z </item>
+        <item> HONDA Freed </item>
+        <item> HONDA HR-V A </item>
+        <item> HONDA Jazz </item>
+        <item> HONDA Mobilio </item>
+        <item> HONDA Odyssey </item>
+        <item> HYUNDAI Excel III </item>
+        <item> HYUNDAI Grand Avega GL </item>
+        <item> HYUNDAI Grand i10 </item>
+        <item> HYUNDAI H-1 </item>
+        <item> HYUNDAI Santa FE </item>
+        <item> HYUNDAI Santa FE 4X4 </item>
+        <item> HYUNDAI Sonata </item>
+        <item> HYUNDAI Sonata YF 2.4 </item>
+        <item> HYUNDAI Starex Mover </item>
+        <item> HYUNDAI Tucson </item>
+        <item> INFINITI FX37 </item>
+        <item> INFINITI FX50 </item>
+        <item> INFINITI G37 </item>
+        <item> INFINITI M37 </item>
+        <item> ISUZU Bison STD </item>
+        <item> ISUZU CYZ </item>
+        <item> ISUZU D-MAX DC L </item>
+        <item> ISUZU D-MAX SC </item>
+        <item> ISUZU FRR90 </item>
+        <item> ISUZU FTR90L </item>
+        <item> ISUZU FVZ34 P </item>
+        <item> ISUZU GVR34H </item>
+        <item> ISUZU GVZ34K </item>
+        <item> ISUZU MU-X </item>
+        <item> ISUZU NHR </item>
+        <item> ISUZU NKR </item>
+        <item> ISUZU NKR71 </item>
+        <item> ISUZU NQR71 </item>
+        <item> ISUZU Panther LM </item>
+        <item> ISUZU Panther Turbo PU </item>
+        <item> JAGUAR F-TYPE </item>
+        <item> JAGUAR F-TYPE S Convtible </item>
+        <item> JAGUAR XF </item>
+        <item> JAGUAR XJL </item>
+        <item> JAGUAR XKR-S </item>
+        <item> JEEP Jeep Cherokee </item>
+        <item> JEEP Jeep Compass </item>
+        <item> JEEP Jeep Wrangler </item>
+        <item> K I A Carens </item>
+        <item> K I A Cerato </item>
+        <item> K I A K-2700 </item>
+        <item> K I A Optima </item>
+        <item> K I A Picanto </item>
+        <item> K I A Picanto Morning </item>
+        <item> K I A Pregio </item>
+        <item> K I A Rio </item>
+        <item> K I A Sorento </item>
+        <item> K I A Sportage </item>
+        <item> LAND ROVER Defender </item>
+        <item> LAND ROVER Discovery </item>
+        <item> LAND ROVER Freelander </item>
+        <item> LAND ROVER Range Rover </item>
+        <item> LEXUS Lexus ES 250 H </item>
+        <item> LEXUS Lexus ES 300 H </item>
+        <item> LEXUS Lexus GS 250 </item>
+        <item> LEXUS Lexus GS 350 </item>
+        <item> LEXUS Lexus GS450 Hybrid </item>
+        <item> LEXUS Lexus IS 250 </item>
+        <item> LEXUS Lexus LS 460 </item>
+        <item> LEXUS Lexus LS 600 Hybrid </item>
+        <item> LEXUS Lexus  LX 570 </item>
+        <item> LEXUS Lexus NX 200 </item>
+        <item> LEXUS Lexus RC F </item>
+        <item> LEXUS Lexus  RX 270 </item>
+        <item> LEXUS Lexus  RX 350 </item>
+        <item> LEXUS Lexus RX 450 Hybrid </item>
+        <item> MAN TRUCK CLA </item>
+        <item> MAN TRUCK TGS </item>
+        <item> MAZDA All New BT-50 Pro DC </item>
+        <item> MAZDA All New BT-50 Pro SC </item>
+        <item> MAZDA Biante SKYACTIV </item>
+        <item> MAZDA CX-5 </item>
+        <item> MAZDA Mazda VX-1 1.4 V </item>
+        <item> MAZDA Mazda2 </item>
+        <item> MAZDA Mazda6 </item>
+        <item> MAZDA Mazda8 </item>
+        <item> MAZDA MX5 </item>
+        <item> MAZDA MY15 New CX-5 2.0 Sport </item>
+        <item> MAZDA New CX-9 </item>
+        <item> MERCEDES BENZ A  Class </item>
+        <item> MERCEDES BENZ Atego </item>
+        <item> MERCEDES BENZ Axor </item>
+        <item> MERCEDES BENZ B Class </item>
+        <item> MERCEDES BENZ C Class </item>
+        <item> MERCEDES BENZ CLA Class </item>
+        <item> MERCEDES BENZ CLS Class </item>
+        <item> MERCEDES BENZ E Class </item>
+        <item> MERCEDES BENZ G Class </item>
+        <item> MERCEDES BENZ GL Class </item>
+        <item> MERCEDES BENZ GLA Class </item>
+        <item> MERCEDES BENZ ML </item>
+        <item> MERCEDES BENZ OC </item>
+        <item> MERCEDES BENZ OH </item>
+        <item> MERCEDES BENZ R 300 L FL AT (V251) </item>
+        <item> MERCEDES BENZ S Class </item>
+        <item> MERCEDES BENZ SLK  Class </item>
+        <item> MERCEDES BENZ Sprinter </item>
+        <item> MERCEDES BENZ V 350 </item>
+        <item> MERCEDES BENZ V CDI 2.2 </item>
+        <item> MINI Cooper </item>
+        <item> MINI Cooper 5-Turer </item>
+        <item> MINI Cooper Countryman </item>
+        <item> MINI Cooper S 5-Turer </item>
+        <item> MINI Cooper S Paceman </item>
+        <item> MINI Cooper S Roadster </item>
+        <item> MINI John Cooper Works </item>
+        <item> MITSUBISHI Delica </item>
+        <item> MITSUBISHI FE </item>
+        <item> MITSUBISHI FE 71/83/84 </item>
+        <item> MITSUBISHI FI </item>
+        <item> MITSUBISHI FJ </item>
+        <item> MITSUBISHI FM </item>
+        <item> MITSUBISHI FN </item>
+        <item> MITSUBISHI FV </item>
+        <item> MITSUBISHI I-Miev </item>
+        <item> MITSUBISHI L-300 </item>
+        <item> MITSUBISHI L-300 PU STD </item>
+        <item> MITSUBISHI Mirage </item>
+        <item> MITSUBISHI Outlander Sport </item>
+        <item> MITSUBISHI Pajero Sport 4X2 </item>
+        <item> MITSUBISHI Pajero Sport 4X4 </item>
+        <item> MITSUBISHI Strada CR 2.8 A - SC GLX </item>
+        <item> MITSUBISHI Strada CR 2.8 HDX - DC GLX </item>
+        <item> MITSUBISHI T-120 SS </item>
+        <item> MITSUBISHI T-120 SS Chs </item>
+        <item> NISSAN Almera (Taxi) </item>
+        <item> NISSAN Elgrand </item>
+        <item> NISSAN Evalia </item>
+        <item> NISSAN Frontier Navara </item>
+        <item> NISSAN GT-R </item>
+        <item> NISSAN Juke </item>
+        <item> NISSAN Livina </item>
+        <item> NISSAN Livina X-Gear </item>
+        <item> NISSAN March </item>
+        <item> NISSAN Murano </item>
+        <item> NISSAN NP 300 Frontier </item>
+        <item> NISSAN Serena </item>
+        <item> NISSAN Teana </item>
+        <item> NISSAN X-Trail </item>
+        <item> PEUGEOT 107 </item>
+        <item> PEUGEOT 208 </item>
+        <item> PEUGEOT 408 </item>
+        <item> PEUGEOT 508 </item>
+        <item> PEUGEOT 3008 Crossover </item>
+        <item> PEUGEOT 3008 D </item>
+        <item> PEUGEOT 5008 </item>
+        <item> PEUGEOT RCZ Coupe </item>
+        <item> PROTON Exora </item>
+        <item> PROTON Gen 2 </item>
+        <item> PROTON Neo R3 </item>
+        <item> PROTON Persona Elegance M-Line </item>
+        <item> PROTON Preve </item>
+        <item> PROTON Saga FL </item>
+        <item> PROTON Savvy </item>
+        <item> PROTON Suprima S </item>
+        <item> RENAULT Captur </item>
+        <item> RENAULT Clio RS </item>
+        <item> RENAULT Duster </item>
+        <item> RENAULT Duster  4X4 </item>
+        <item> RENAULT Koleos </item>
+        <item> RENAULT Megane RS </item>
+        <item> SMART Smart fortwo Cabrio </item>
+        <item> SMART Smart fortwo Coupe </item>
+        <item> SUBARU BRZ </item>
+        <item> SUBARU Forester </item>
+        <item> SUBARU Impreza </item>
+        <item> SUBARU Legacy </item>
+        <item> SUBARU Outback </item>
+        <item> SUBARU Tribeca </item>
+        <item> SUBARU XV </item>
+        <item> SUZUKI APV </item>
+        <item> SUZUKI Carry </item>
+        <item> SUZUKI Celerio </item>
+        <item> SUZUKI Ertiga </item>
+        <item> SUZUKI Grand Vitara </item>
+        <item> SUZUKI Karimun Wagon </item>
+        <item> SUZUKI Neo Baleno </item>
+        <item> SUZUKI OTHERS </item>
+        <item> SUZUKI Splash </item>
+        <item> SUZUKI Swift </item>
+        <item> SUZUKI SX4  X-Over </item>
+        <item> TATA ACE EX2 </item>
+        <item> TATA Aria </item>
+        <item> TATA Manza </item>
+        <item> TATA PRIMA 4023 </item>
+        <item> TATA Safari Storme </item>
+        <item> TATA Super Ace </item>
+        <item> TATA Vista </item>
+        <item> TATA Xenon RX </item>
+        <item> TOYOTA 86 </item>
+        <item> TOYOTA A l p h a r d </item>
+        <item> TOYOTA Agya 1.0 E </item>
+        <item> TOYOTA Avanza </item>
+        <item> TOYOTA Camry </item>
+        <item> TOYOTA Camry Hybrid </item>
+        <item> TOYOTA Corolla Altis </item>
+        <item> TOYOTA Crown </item>
+        <item> TOYOTA Dyna </item>
+        <item> TOYOTA Etios </item>
+        <item> TOYOTA Etios 1.2 Taxi </item>
+        <item> TOYOTA FJ Cruiser </item>
+        <item> TOYOTA Fortuner 4X2 </item>
+        <item> TOYOTA Fortuner 4X4 </item>
+        <item> TOYOTA HI-ACE </item>
+        <item> TOYOTA HiLux DC </item>
+        <item> TOYOTA HiLux SC </item>
+        <item> TOYOTA Kijang Innova </item>
+        <item> TOYOTA Land Cruiser </item>
+        <item> TOYOTA Limo Taxi </item>
+        <item> TOYOTA Nav1 </item>
+        <item> TOYOTA Previa </item>
+        <item> TOYOTA Prius </item>
+        <item> TOYOTA RAV </item>
+        <item> TOYOTA Rush </item>
+        <item> TOYOTA Vellflre </item>
+        <item> TOYOTA Vios </item>
+        <item> TOYOTA Yaris </item>
+        <item> UD TRUCKS CDA </item>
+        <item> UD TRUCKS CDE </item>
+        <item> UD TRUCKS CWA </item>
+        <item> UD TRUCKS CWM </item>
+        <item> UD TRUCKS GKE </item>
+        <item> UD TRUCKS GWE </item>
+        <item> UD TRUCKS PK </item>
+        <item> VOLKSWAGEN Caravelle </item>
+        <item> VOLKSWAGEN Golf </item>
+        <item> VOLKSWAGEN Multivan </item>
+        <item> VOLKSWAGEN Panel Van TDI 2.0 </item>
+        <item> VOLKSWAGEN Polo </item>
+        <item> VOLKSWAGEN Scirocco </item>
+        <item> VOLKSWAGEN T o u r a n </item>
+        <item> VOLKSWAGEN Tiguan 1.4 </item>
+        <item> VOLKSWAGEN Tiguan 2.0 </item>
+        <item> VOLKSWAGEN Touareg 3.0 TDI </item>
+
+    </string-array>
 </resources>
