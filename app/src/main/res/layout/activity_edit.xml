@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ui.EditActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Nama Pelapor"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_nama"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan nama pelapor"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Nomor Plat Kendaraan"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_nopol"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan nomor plat kendaraan"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Tipe Kendaraan"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_tipe_kendaraan"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan tipe kendaraan"
+                android:focusable="false"
+                android:editable="false"
+                android:clickable="true"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Tahun Kendaraan"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_tahun_kendaraan"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan tahun kendaraan"
+                android:inputType="number"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Nomor Rangka"
+                tools:ignore="Autofill" />
+            <EditText
+                android:id="@+id/et_nomor_rangka"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan nomor rangka"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Nomor Mesin"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_nomor_mesin"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan nomor mesin"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Nomor Aduan"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/et_nomor_aduan"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Masukkan nomor aduan"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:paddingStart="3dp"
+                android:text="Status Aduan"
+                tools:ignore="Autofill" />
+
+            <Spinner
+                android:id="@+id/spinner_status_aduan"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:entries="@array/status_aduan"
+                android:inputType="text"
+                tools:ignore="Autofill" />
+
+            <Button
+                android:id="@+id/bt_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="10dp"
+                android:text="Edit laporan"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
