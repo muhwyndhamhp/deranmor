@@ -28,6 +28,8 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
+
+        actionBar?.title = "Cari Laporan"
         reportViewModel = ViewModelProviders.of(this).get(ReportViewModel::class.java)
 
         reportViewModel?.getReport()

@@ -49,6 +49,7 @@
             android:height="110dp" />
 
         <Button
+            android:id="@+id/bt_update"
             android:width="110dp"
             android:text="Update Data"
             android:textSize="13sp"

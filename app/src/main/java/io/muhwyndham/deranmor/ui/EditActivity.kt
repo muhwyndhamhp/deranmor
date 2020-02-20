@@ -27,6 +27,8 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
 
+        actionBar?.title = "Edit Laporan"
+
         reportViewModel = ViewModelProviders.of(this).get(ReportViewModel::class.java)
         carModelViewModel = ViewModelProviders.of(this).get(CarModelViewModel::class.java)
 
@@ -87,12 +89,12 @@ class EditActivity : AppCompatActivity() {
         if (it != null) {
             et_nama.setText(it.name)
             et_nopol.setText(it.idNopol)
-            et_tipe_kendaraan.setText(it.tipeKendaraan.dropLast(5))
-            et_tahun_kendaraan.setText(setVehicleYear(it.tipeKendaraan))
+            et_tipe_kendaraan.setText(it.tipeKendaraan!!.dropLast(5))
+            et_tahun_kendaraan.setText(setVehicleYear(it.tipeKendaraan!!))
             et_nomor_mesin.setText(it.nomorMesin)
             et_nomor_rangka.setText(it.nomorRangka)
             et_nomor_aduan.setText(it.nomorAduan)
-            spinner_status_aduan.setSelection(getIndex(it.statusAduan))
+            spinner_status_aduan.setSelection(getIndex(it.statusAduan!!))
 
         }
     }

@@ -7,8 +7,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import io.muhwyndham.deranmor.R
 import io.muhwyndham.deranmor.model.CarModel
+import io.muhwyndham.deranmor.model.Report
 import io.muhwyndham.deranmor.repository.AppRepository
 
 class MainActivity : AppCompatActivity() {
@@ -65,6 +67,7 @@ class MainActivity : AppCompatActivity() {
                 toast.show()
 
                 insertCarModels()
+                updateReportDatabase()
 
                 startActivity(Intent(this@MainActivity, HomeActivity::class.java))
             } else {
@@ -74,6 +77,18 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 )
                 toast.show()
+            }
+        }
+    }
+
+    private fun updateReportDatabase() {
+        val repository = AppRepository(application)
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("report").get().addOnSuccessListener { documents ->
+            for (document in documents) {
+                val report = document.toObject(Report::class.java)
+                repository.setReportForUpdate(report)
             }
         }
     }

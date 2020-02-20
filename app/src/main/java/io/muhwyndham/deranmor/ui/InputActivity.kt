@@ -27,6 +27,8 @@ class InputActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
 
+        actionBar?.title = "Input Laporan"
+
         reportViewModel = ViewModelProviders.of(this).get(ReportViewModel::class.java)
         carModelViewModel = ViewModelProviders.of(this).get(CarModelViewModel::class.java)
 

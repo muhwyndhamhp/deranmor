@@ -38,9 +38,17 @@ class AppRepository(application: Application) : CoroutineScope {
         launch { setReportBG(report) }
     }
 
+    fun setReportForUpdate(report: Report) {
+        launch { setReportForUpdateBG(report) }
+    }
+
 
     fun updateReport(report: Report) {
         launch { updateReportBG(report) }
+    }
+
+    fun deleteAllReport() {
+        launch { deleteAllReportBG() }
     }
 
     fun getAllCarModel() = carModelDao?.getAllCarModel()
@@ -51,10 +59,22 @@ class AppRepository(application: Application) : CoroutineScope {
         launch { setCarModelBG(carModel) }
     }
 
+    private suspend fun setReportForUpdateBG(report: Report) {
+        withContext(Dispatchers.IO) {
+            reportDao?.setReport(report)
+        }
+    }
+
     private suspend fun updateReportBG(report: Report) {
         withContext(Dispatchers.IO) {
             reportDao?.updateReport(report)
             db.collection("report").document(report.idNopol).set(report)
+        }
+    }
+
+    private suspend fun deleteAllReportBG() {
+        withContext(Dispatchers.IO) {
+            reportDao?.deleteAll()
         }
     }
 
