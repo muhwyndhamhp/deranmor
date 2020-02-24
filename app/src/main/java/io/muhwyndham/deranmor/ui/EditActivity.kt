@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -34,7 +33,7 @@ class EditActivity : AppCompatActivity() {
 
         prepareDialogObserver()
         prepareInputCaps()
-        prepareSpinner()
+//        prepareSpinner()
         prepareInitialData()
 
         et_tipe_kendaraan.setOnClickListener {
@@ -49,7 +48,8 @@ class EditActivity : AppCompatActivity() {
             reportViewModel?.validateReportInput(
                 et_nama,
                 et_tipe_kendaraan,
-                et_nomor_aduan
+                et_nomor_aduan,
+                et_status_aduan
             )
                 ?.observe(this@EditActivity, Observer { isValid ->
                     reportViewModel?.updatereport(
@@ -61,7 +61,7 @@ class EditActivity : AppCompatActivity() {
                             if (et_nomor_mesin.text.toString().trim { it <= ' ' }.isNotEmpty()) et_nomor_mesin.text.toString().toUpperCase().trim() else "-",
                             " ",
                             et_nomor_aduan.text.toString().toUpperCase().trim(),
-                            spinner_status_aduan.selectedItem.toString()
+                            et_status_aduan.text.toString()
                         )
                     )?.observe(this@EditActivity, Observer { if (it) finish() })
                 })
@@ -94,7 +94,7 @@ class EditActivity : AppCompatActivity() {
             et_nomor_mesin.setText(it.nomorMesin)
             et_nomor_rangka.setText(it.nomorRangka)
             et_nomor_aduan.setText(it.nomorAduan)
-            spinner_status_aduan.setSelection(getIndex(it.statusAduan!!))
+            et_status_aduan.setText(it.statusAduan)
 
         }
     }
@@ -111,17 +111,17 @@ class EditActivity : AppCompatActivity() {
         return tipeKendaraan.takeLast(4)
     }
 
-    private fun prepareSpinner() {
-
-        val adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.status_aduan,
-            android.R.layout.simple_spinner_item
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        spinner_status_aduan.adapter = adapter
-    }
+//    private fun prepareSpinner() {
+//
+//        val adapter = ArrayAdapter.createFromResource(
+//            this,
+//            R.array.status_aduan,
+//            android.R.layout.simple_spinner_item
+//        )
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//
+//        spinner_status_aduan.adapter = adapter
+//    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

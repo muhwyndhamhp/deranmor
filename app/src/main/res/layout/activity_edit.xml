@@ -199,8 +199,22 @@
                 android:text="Status Aduan"
                 tools:ignore="Autofill" />
 
-            <Spinner
-                android:id="@+id/spinner_status_aduan"
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_status_aduan"-->
+<!--                android:background="@drawable/edit_text_background"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:entries="@array/status_aduan"-->
+<!--                android:inputType="text"-->
+<!--                tools:ignore="Autofill" />-->
+
+            <EditText
+                android:id="@+id/et_status_aduan"
                 android:background="@drawable/edit_text_background"
                 android:padding="10dp"
                 android:layout_width="match_parent"
@@ -209,7 +223,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                android:entries="@array/status_aduan"
+                android:hint="Masukkan status aduan"
                 android:inputType="text"
                 tools:ignore="Autofill" />
 

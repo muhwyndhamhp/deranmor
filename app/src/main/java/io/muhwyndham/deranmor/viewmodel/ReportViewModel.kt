@@ -45,13 +45,16 @@ class ReportViewModel(application: Application) : AndroidViewModel(application) 
     fun validateReportInput(
         et_nama: EditText,
         et_tipe_kendaraan: EditText,
-        et_nomor_aduan: EditText
+        et_nomor_aduan: EditText,
+        et_status_aduan: EditText
     ): LiveData<Boolean> {
         return if (
             et_nama.text.toString().trim { it <= ' ' }.isNotEmpty()
             && et_nama.text.toString().trim { it <= ' ' }.isNotEmpty()
             && et_tipe_kendaraan.text.toString().trim { it <= ' ' }.isNotEmpty()
             && et_nomor_aduan.text.toString().trim { it <= ' ' }.isNotEmpty()
+            && et_status_aduan.text.toString().trim { it <= ' ' }.isNotEmpty()
+
 
         ) {
             toastLiveData.value = "Data telah diinput!"
