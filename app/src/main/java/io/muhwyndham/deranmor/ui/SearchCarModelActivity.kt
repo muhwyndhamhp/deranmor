@@ -1,11 +1,13 @@
 package io.muhwyndham.deranmor.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -14,8 +16,10 @@ import io.muhwyndham.deranmor.R
 import io.muhwyndham.deranmor.adapter.SearchCarModelAdapter
 import io.muhwyndham.deranmor.model.CarModel
 import io.muhwyndham.deranmor.viewmodel.CarModelViewModel
-import io.muhwyndham.deranmor.viewmodel.ReportViewModel
-import kotlinx.android.synthetic.main.activity_search.*
+import kotlinx.android.synthetic.main.activity_search.bt_search
+import kotlinx.android.synthetic.main.activity_search.et_search
+import kotlinx.android.synthetic.main.activity_search.rv_report
+import kotlinx.android.synthetic.main.activity_search_car_model.*
 
 class SearchCarModelActivity : AppCompatActivity() {
 
@@ -37,15 +41,21 @@ class SearchCarModelActivity : AppCompatActivity() {
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
+            @SuppressLint("SetTextI18n")
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (et_search.text.toString().trim { it <= ' ' }.isNotEmpty())
-                    carModelViewModel?.getReportThatContainString("%${et_search.text.toString().trim()}%")?.observe(
-                        this@SearchCarModelActivity,
-                        Observer<List<CarModel>> { this@SearchCarModelActivity.renderReports(it) })
-                else if (et_search.text.toString().trim().isEmpty())
+                if (et_search.text.toString().trim { it <= ' ' }.isNotEmpty()) {
+                    carModelViewModel?.getReportThatContainString("%${et_search.text.toString().trim()}%")
+                        ?.observe(
+                            this@SearchCarModelActivity,
+                            Observer<List<CarModel>> { this@SearchCarModelActivity.renderReports(it) })
+                    ll_add_custom_car_model.visibility = View.VISIBLE
+                    tv_custom_car_model.text = "Set sebagai '${et_search.text}'"
+                } else if (et_search.text.toString().trim().isEmpty()) {
                     carModelViewModel?.getCarModel()?.observe(
                         this@SearchCarModelActivity,
                         Observer<List<CarModel>> { this@SearchCarModelActivity.renderReports(it) })
+                    ll_add_custom_car_model.visibility = View.GONE
+                }
             }
 
         })
@@ -59,6 +69,10 @@ class SearchCarModelActivity : AppCompatActivity() {
                 carModelViewModel?.getCarModel()?.observe(
                     this,
                     Observer<List<CarModel>> { this.renderReports(it) })
+        }
+
+        ll_add_custom_car_model.setOnClickListener {
+            setCarModel(et_search.text.toString())
         }
     }
 
